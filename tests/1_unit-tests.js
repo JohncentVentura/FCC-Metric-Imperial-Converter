@@ -5,6 +5,7 @@ const ConvertHandler = require('../controllers/convertHandler.js');
 let convertHandler = new ConvertHandler();
 
 suite('Unit Tests', function(){
+    //Tests convertHandler.getNum(input) to check if input is equals to the expected number
     suite("Function convertHandler.getNum(input)", function (){
         test("Whole number input", function(done){
             let input = "32L";
@@ -43,6 +44,7 @@ suite('Unit Tests', function(){
         });
     });
 
+    //Tests convertHandler.getUnit(input) to check if input is equals to the expected output unit
     suite("Function convertHandler.getUnit(input)", function (){
         test("For Each Valid Unit Inputs", function(done){
             let input = [
@@ -85,6 +87,7 @@ suite('Unit Tests', function(){
         });
     });
 
+    //Tests convertHandler.getReturnUnit(initUnit) if input and expect are the corresponding unit
     suite("Function convertHandler.getReturnUnit(initUnit)", function (){
         test("For Each Valid Unit Inputs", function(done){
             let input = [ "gal", "l", "mi", "km", "lbs", "kg"];
@@ -96,7 +99,8 @@ suite('Unit Tests', function(){
         });
     });
 
-    suite("Function convertHandler.spellOutUnit(initUnit)", function (){
+    //Tests convertHandler.getReturnUnit(initUnit) if input is the abbreviation of the expected unit
+    suite("Function c", function (){
         test("For Each Valid Unit Inputs", function(done){
             let input = [ "gal", "l", "mi", "km", "lbs", "kg"];
             let expect = [ "gallons", "liters", "miles", "kilometers", "pounds", "kilograms"];
@@ -107,6 +111,7 @@ suite('Unit Tests', function(){
         });
     });
 
+    //Tests convertHandler.convert(num, unit) if the conversion works properly
     suite("Function convertHandler.convert(num, unit)", function (){
         test("Gal to L", function(done){
             let input = [5, "gal"];
