@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Start the main application
-node server.js &
+node server.js
 
 # Run tests
 npm test
